@@ -6,15 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "cross-env PORT=3001 node index.js"
+    "dev": "cross-env PORT=3001 nodemon index.js"
   },
   "author": "awesomeui.dev@gmail.com",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-sass": "^4.0.2",
     "nodemon": "^1.18.7"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cross-env": "^5.2.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "jquery": "^3.3.1"
