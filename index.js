@@ -1,4 +1,5 @@
 const express = require('express')
+const config = require('./config')
 const app = express()
 const port = 3002
 const bodyParser = require('body-parser')
@@ -14,8 +15,8 @@ app.use(
 
 app.get('/', (req, res) => res.render('index', {
         url: 'index',
-        data: 'test'
+        data: 'test@'
     }
 ))
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(config.PORT, () => console.log(`Example app listening on port ${config.PORT}!`))
