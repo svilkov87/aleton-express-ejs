@@ -1,0 +1,14 @@
+<nav class="b-nav">
+    <img class="b-nav__logo" src="/public/images/aleton-logo.png" alt="aleton-logo">
+    <ul class="b-nav__ul">
+        <% if (url === 'index') { %>
+        <a href="/patent">контакты</a>
+        <!-- <a href="/patent">patent</a> -->
+        <% } else { %>
+        <li class="b-nav__li">not index</li>
+        <li class="b-nav__li">
+            <a href="/">index</a>
+        </li>
+        <% } %>
+    </ul>
+</nav>
