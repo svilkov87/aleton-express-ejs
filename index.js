@@ -12,14 +12,11 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(staticAsset(path.join(__dirname, 'public')))
 app.use('*/images', express.static(path.join(__dirname, 'public/images')))
-// app.use(
-//     '/javascripts',
-//     express.static(path.join(__dirname, 'node_modules', 'jquery', 'dist'))
-// )
 app.use(
     '/javascripts',
     express.static(path.join(__dirname, 'public/javascripts'))
 )
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 app.get('/', (req, res) => res.render('index', {
         url: 'index',
