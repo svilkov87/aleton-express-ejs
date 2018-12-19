@@ -51,41 +51,37 @@
 }
 //медиа-запросы
 @mixin large{
-  @media only screen and(min-width: 1024px) {
-    @content;
-  }
+	@media only screen and(max-width: 1024px) {
+		@content;
+	}
 }
 
-@mixin tablet {
-  @media only screen and(min-width: 768px) {
-    @content;
-  }
-}
-@mixin tablet_max {
-  @media only screen and(max-width: 768px) {
-    @content;
-  }
-}
-@mixin laptop{
- @media only screen and(max-width: 1024px) {
-  @content;
-}
+@mixin desktop_1024 {
+	@media only screen and(min-width: 1024px) and (max-width: 2560px) {
+		@content;
+	}
 }
 
-@mixin mobile_l{
- @media only screen and(max-width: 426px) {
-  @content;
-}
-}
-
-@mixin mobile_m{
-  @media only screen and (max-width: 375px) {
-    @content;
-  }
+@mixin md_max {
+	@media only screen and(max-width: 768px) {
+		@content;
+	}
 }
 
-@mixin mobile_s{
-  @media only screen and (max-width: 320px) {
-    @content;
-  }
+@mixin md_425 {
+	@media only screen and(max-width: 425px) {
+		@content;
+	}
+}
+
+@mixin md_375 {
+	@media only screen and (max-width: 375px) {
+		@content;
+	}
+}
+
+@mixin xs {
+	@media only screen and (max-width: 320px) {
+		@content;
+	}
 }
