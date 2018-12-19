@@ -1,13 +1,19 @@
-<nav class="b-nav">
+<nav class="b-nav b-container">
     <img class="b-nav__logo" src="/public/images/aleton-logo.png" alt="aleton-logo">
     <ul class="b-nav__ul">
         <% if (url === 'index') { %>
-        <a href="/patent">контакты</a>
-        <!-- <a href="/patent">patent</a> -->
+        <li class="b-nav__li"><a class="b-nav__main-link b-nav__main-link_contacts-toggle" href="#">Контакты</a></li>
         <% } else { %>
-        <li class="b-nav__li">not index</li>
-        <li class="b-nav__li">
-            <a href="/">index</a>
+        <li class="b-nav__li"><a class="b-nav__main-link" href="/">Главная</a></li>
+        <li class="b-nav__li b-nav__dropdown-link">
+            <a class="b-nav__main-link" href="#">Услуги</a>
+            <ul class="b-nav__ul-services">
+                <li class="b-nav__li-services"><a class="b-nav__services-link" href="/patent">Патенты</a></li>
+                <li class="b-nav__li-services"><a class="b-nav__services-link" href="/rvp">Разрешение на временное проживание</a></li>
+                <li class="b-nav__li-services"><a class="b-nav__services-link" href="/vnz">Вид на жительство</a></li>
+                <li class="b-nav__li-services"><a class="b-nav__services-link" href="/citizenship">Гражданство</a></li>
+                <li class="b-nav__li-services"><a class="b-nav__services-link b-nav__main-link_contacts-toggle" href="#">Контакты</a></li>
+            </ul>
         </li>
         <% } %>
     </ul>
