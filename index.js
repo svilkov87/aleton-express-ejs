@@ -24,9 +24,14 @@ app.get('/', (req, res) => res.render('index', {
     }
 ))
 
-app.get('/patent', (req, res) => res.render('index', {
+app.get('/patent', (req, res) => res.render('patent', {
         url: 'patent',
         data: 'patent'
+    }
+))
+app.get('/rvp', (req, res) => res.render('rvp', {
+        url: 'rvp',
+        data: 'rvp'
     }
 ))
 

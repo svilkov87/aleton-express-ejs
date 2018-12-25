@@ -3,11 +3,16 @@
     <% include layout/head.ejs %>
 <body>
 <header class="b-header">
-    <div class="b-container">
-        <% include layout/nav.ejs %>
-    </div>
+    <% include layout/nav.ejs %>
 </header>
-<p><%= data %></p>
+<section class="b-menu">
+    <div class="b-container">
+        <% include layout/menu.ejs %>
+    </div>
+</section>
+<section class="b-description-section">
+    <div class="b-container"></div>
+</section>
 <% include layout/scripts.ejs %>
 </body>
 </html>
