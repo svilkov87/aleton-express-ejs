@@ -2,18 +2,16 @@
 <html lang="en">
     <% include layout/head.ejs %>
 <body>
-<section class="b-page">
-    <section class="b-page__body">
-        <header class="b-header">
-            <% include layout/nav.ejs %>
-        </header>
-        <section class="b-description-section">
-            <div class="b-container">
-                <h1 class="b-description-section__title">Помощь в оформлении документов для иностранных граждан.</h1>
-            </div>
-        </section>
-    </section>
-    <section class="b-page__sidebar"></section>
+<header class="b-header">
+    <% include layout/nav.ejs %>
+</header>
+<section class="b-menu">
+    <div class="b-container">
+        <% include layout/menu.ejs %>
+    </div>
+</section>
+<section class="b-description-section">
+    <div class="b-container"></div>
 </section>
 <% include layout/scripts.ejs %>
 </body>

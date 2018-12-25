@@ -1,2 +1,20 @@
 <script src="/jquery/jquery.min.js"></script>
 <script src="<%= assetFingerprint('/javascripts/main.min.js') %>"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+	ymaps.ready(init);
+	var myMap,
+			myPlacemark;
+	function init(){
+		myMap = new ymaps.Map("map", {
+			center: [56.330241, 43.996186
+			],
+			zoom: 16
+		});
+		myPlacemark = new ymaps.Placemark([56.330241, 43.996186], {
+			hintContent: 'Москва!',
+			balloonContent: 'Столица России'
+		});
+		myMap.geoObjects.add(myPlacemark);
+	}
+</script>

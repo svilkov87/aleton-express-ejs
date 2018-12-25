@@ -11,11 +11,8 @@ $(function() {
             let delayData = $( this ).data('fade')
             let listItems = $( this )
 
-            console.log(listItems)
-
             setTimeout(function () {
                 listItems.toggleClass('b-menu__li_fade-effect');
-                // console.log(delayData)
             }, delayData + '00' )
 
         } )
