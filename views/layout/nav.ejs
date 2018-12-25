@@ -1,19 +1,18 @@
-<nav class="b-nav b-container">
-    <img class="b-nav__logo" src="/public/images/aleton-logo.png" alt="aleton-logo">
+<nav class="b-nav">
+    <!-- <img class="b-nav__logo" src="/public/images/aleton-logo.png" alt="aleton-logo"> -->
+    <span class="b-nav__logo">Алетон</span>
+    <span class="b-nav__text">Помощь в оформлении документов для иностранных граждан.</span>
     <ul class="b-nav__ul">
         <% if (url === 'index') { %>
-        <li class="b-nav__li"><a class="b-nav__main-link b-nav__main-link_contacts-toggle" href="#">Контакты</a></li>
+        <li class="b-nav__li b-nav__li_dropdown-link">
+            <span class="b-nav__span">услуги</span>
+        </li>
         <% } else { %>
-        <li class="b-nav__li"><a class="b-nav__main-link" href="/">Главная</a></li>
-        <li class="b-nav__li b-nav__dropdown-link">
-            <a class="b-nav__main-link" href="#">Услуги</a>
-            <ul class="b-nav__ul-services">
-                <li class="b-nav__li-services"><a class="b-nav__services-link" href="/patent">Патенты</a></li>
-                <li class="b-nav__li-services"><a class="b-nav__services-link" href="/rvp">Разрешение на временное проживание</a></li>
-                <li class="b-nav__li-services"><a class="b-nav__services-link" href="/vnz">Вид на жительство</a></li>
-                <li class="b-nav__li-services"><a class="b-nav__services-link" href="/citizenship">Гражданство</a></li>
-                <li class="b-nav__li-services"><a class="b-nav__services-link b-nav__main-link_contacts-toggle" href="#">Контакты</a></li>
-            </ul>
+        <li class="b-nav__li b-nav__li-mobile">
+            <a href="/"><i class="fas fa-home"></i></a>
+        </li>
+        <li class="b-nav__li b-nav__contacts-mobile">
+            <a href="#"><i class="fas fa-chevron-right"></i></a>
         </li>
         <% } %>
     </ul>

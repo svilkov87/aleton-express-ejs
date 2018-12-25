@@ -2,19 +2,22 @@
 <html lang="en">
     <% include layout/head.ejs %>
 <body>
-<section class="b-page">
-    <section class="b-page__body">
-        <header class="b-header">
-            <% include layout/nav.ejs %>
-            <!-- </div> -->
-        </header>
-        <section class="b-description-section">
-            <div class="b-container">
-                <h1 class="b-description-section__title">Помощь в оформлении документов для иностранных граждан.</h1>
-            </div>
-        </section>
-    </section>
-    <section class="b-page__sidebar"></section>
+<header class="b-header">
+    <% include layout/nav.ejs %>
+</header>
+<section class="b-menu">
+    <div class="b-container">
+        <ul class="b-menu__ul">
+            <li class="b-menu__li" data-fade="5"><a href="/patent">Патенты</a></li>
+            <li class="b-menu__li" data-fade="7"><a href="/rvp">Разрешение на временное проживание</a></li>
+            <li class="b-menu__li" data-fade="9"><a href="/vnz">Вид на жительство</a></li>
+            <li class="b-menu__li" data-fade="11"><a href="/citizenship">Гражданство</a></li>
+        </ul>
+    </div>
+</section>
+<section class="b-description-section">
+    <div class="b-container"></div>
+</section>
 </section>
 <% include layout/scripts.ejs %>
 </body>

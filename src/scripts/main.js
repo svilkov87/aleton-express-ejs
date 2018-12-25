@@ -1,22 +1,34 @@
 $(function() {
     console.log('its working!111');
 
-    const $servicesLink = $('.b-nav__dropdown-link')
-    const $servicesBlock = $('.b-nav__ul-services')
-    const $menuToggle = $('.b-nav__main-link_contacts-toggle')
+    $('.b-nav__li_dropdown-link').on( 'click', function() {
+        $(this).children('.b-nav__span').toggleClass('b-nav__span_active-nav-span')
+        $('.b-menu').toggleClass('b-menu_active-toggle')
+        $('.b-nav__logo').toggleClass('b-nav__logo_active-logo')
 
-    $servicesLink.hover(
+        $('.b-menu__li').each( function () {
+
+            let delayData = $( this ).data('fade')
+            let listItems = $( this )
+
+            console.log(listItems)
+
+            setTimeout(function () {
+                listItems.toggleClass('b-menu__li_fade-effect');
+                // console.log(delayData)
+            }, delayData + '00' )
+
+        } )
+        
+    })
+
+    $('.b-menu__li').hover(
         function () {
-            $servicesBlock.addClass('b-nav__ul-services_active-block')
+            $('.b-menu__li').not($(this)).addClass('b-menu__li_blur')
         },
         function () {
-            $servicesBlock.removeClass('b-nav__ul-services_active-block')
+            $('.b-menu__li').not($(this)).removeClass('b-menu__li_blur')
         }
     )
 
-    $menuToggle.on( 'click', function() {
-        console.log('test')
-        $('.b-page__body').toggleClass('b-page__body_slide-left')
-        $('.b-page__sidebar').toggleClass('b-page__sidebar_slide-left')
-    })
 })

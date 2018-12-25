@@ -1,9 +1,14 @@
 //transition
-$transition_default: .2s;
+$transition_default: .4s;
 
 //padding
 $indent_default: 10px;
+$nav_height: 100px;
 
 //colors
 $link_default_color: #000;
 $link_default_color_hover: orangered;
+
+$nav_bg: #fff;
+$nav_zindex: 55;
+$nav_color_active: #fff;
